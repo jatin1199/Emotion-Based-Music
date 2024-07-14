@@ -28,7 +28,7 @@ def get_emotion():
             
             # Perform emotion analysis on the face ROI
             result = DeepFace.analyze(face_roi, actions=['emotion'], enforce_detection=False, expand_percentage=30)
-            print(result)
+            # print(result)
 
             # Determine the dominant emotion
             emotion = result[0]['dominant_emotion']

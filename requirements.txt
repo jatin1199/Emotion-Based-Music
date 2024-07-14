@@ -1,1 +1,4 @@
+# Python 3.11.0
 deepface==0.0.92
+python-dotenv==1.0.1
+opencv-python==4.10.0.84
