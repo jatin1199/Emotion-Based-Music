@@ -3,3 +3,4 @@ deepface==0.0.92
 python-dotenv==1.0.1
 opencv-python==4.10.0.84
 streamlit==1.36.0
+tf_keras==2.16.0
