@@ -14,9 +14,11 @@ if st.button("Get Emotion"):
     # emotion
 singer = st.session_state.singer
 songs = []
+got_songs = False
 
 if emotion:
     songs = fetch_songs(emotion=emotion, singer=singer)
+    got_songs = True
 
 # Create Cards of Links of youtube to listen to songs
 if songs:
@@ -28,6 +30,9 @@ if songs:
             link+=by
         st.markdown("<h4 style='text-align: center;'> <a href={}>{}-{} </a> </h4>".format(link,i+1,song), unsafe_allow_html=True)
         st.markdown("<h6 style='text-align: center; color:grey'> {} - {} </h6>".format(singer, album), unsafe_allow_html=True)
+        got_songs = False
+elif len(songs)==0 and got_songs==True:
+    st.text(f"No Songs found for Singer {singer}")
         
 
 

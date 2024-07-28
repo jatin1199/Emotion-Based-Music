@@ -34,9 +34,13 @@ def fetch_songs(emotion, singer=None):
    
     songs = []
     data = response.json()['tracks']['items']
+    n = min(len(data), 5)
     # Our response has 10 results, we list
     # # them down using for loop
-    for i in range(5):
+    # print("jatin")
+    # print(data)
+    # print("jatin")
+    for i in range(n):
         # data = 
         song, album = data[i]['data']['name'],  data[i]['data']['albumOfTrack']['name']
         print(f"song name: {song} \nalbum name: {album} \n")
